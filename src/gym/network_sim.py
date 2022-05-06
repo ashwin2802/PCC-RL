@@ -188,16 +188,16 @@ class Network():
         #reward = 0 if (loss > 0.1 or throughput < bw_cutoff or latency > lat_cutoff or loss > loss_cutoff) else 1 #
         
         # Super high throughput
-        #reward = REWARD_SCALE * (20.0 * throughput / RATE_OBS_SCALE - 1e3 * latency / LAT_OBS_SCALE - 2e3 * loss)
+        reward = REWARD_SCALE * (20.0 * throughput / (8 * BYTES_PER_PACKET) - 1e3 * latency - 2e3 * loss)
         
         # Very high thpt
-        reward = (10.0 * throughput / (8 * BYTES_PER_PACKET) - 1e3 * latency - 2e3 * loss)
+        # reward = (10.0 * throughput / (8 * BYTES_PER_PACKET) - 1e3 * latency - 2e3 * loss)
         
         # High thpt
         #reward = REWARD_SCALE * (5.0 * throughput / RATE_OBS_SCALE - 1e3 * latency / LAT_OBS_SCALE - 2e3 * loss)
         
         # Low latency
-        #reward = REWARD_SCALE * (2.0 * throughput / RATE_OBS_SCALE - 1e3 * latency / LAT_OBS_SCALE - 2e3 * loss)
+        # reward = REWARD_SCALE * (2.0 * throughput / (8 * BYTES_PER_PACKET) - 1e3 * latency  - 2e3 * loss)
         #if reward > 857:
         #print("Reward = %f, thpt = %f, lat = %f, loss = %f" % (reward, throughput, latency, loss))
         
@@ -473,7 +473,7 @@ class SimulatedNetworkEnv(gym.Env):
         self.net = Network(self.senders, self.links)
         self.episodes_run += 1
         if self.episodes_run > 0 and self.episodes_run % 100 == 0:
-            self.dump_events_to_file("pcc_env_log_run_%d.json" % self.episodes_run)
+            self.dump_events_to_file("runs/ppo_hight/pcc_env_log_run_%d.json" % self.episodes_run)
         self.event_record = {"Events":[]}
         self.net.run_for_dur(self.run_dur)
         self.net.run_for_dur(self.run_dur)

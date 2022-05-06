@@ -1,0 +1,19 @@
+PPO
+Arch: [128, 2]
+Last Interation Training Log:
+
+
+------------------------------------
+| EpLenMean       | 400            |
+| EpRewMean       | 807            |
+| EpThisIter      | 20             |
+| EpisodesSoFar   | 1658           |
+| TimeElapsed     | 1.24e+03       |
+| TimestepsSoFar  | 663552         |
+| ev_tdlam_before | 0              |
+| loss_ent        | 1.3711348      |
+| loss_kl         | 0.0042225365   |
+| loss_pol_entpen | -0.013711347   |
+| loss_pol_surr   | -0.00028123427 |
+| loss_vf_loss    | 744.7812       |
+------------------------------------

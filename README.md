@@ -1,3 +1,7 @@
+This repository is mostly a copy of 
+
+Code has been edited to conduct required experiments. Relevant results are stored in runs/ and **_log directories
+
 # PCC-RL
 Reinforcement learning resources for the Performance-oriented Congestion Control
 project.

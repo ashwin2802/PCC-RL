@@ -1,0 +1,18 @@
+PPO
+Arch: [64, 32, 64]
+Last Iteration :
+
+-----------------------------------
+| EpLenMean       | 400           |
+| EpRewMean       | 210           |
+| EpThisIter      | 20            |
+| EpisodesSoFar   | 1658          |
+| TimeElapsed     | 985           |
+| TimestepsSoFar  | 663552        |
+| ev_tdlam_before | 0.926         |
+| loss_ent        | 2.1692731     |
+| loss_kl         | 0.0025427297  |
+| loss_pol_entpen | -0.02169273   |
+| loss_pol_surr   | 0.00054820743 |
+| loss_vf_loss    | 393.6254      |
+-----------------------------------
