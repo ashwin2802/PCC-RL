@@ -1,4 +1,4 @@
-This repository is mostly a copy of 
+This repository is mostly a copy of https://github.com/PCCproject/PCC-RL
 
 Code has been edited to conduct required experiments. Relevant results are stored in runs/ and **_log directories
 
